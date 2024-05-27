@@ -1,7 +1,7 @@
 NAME = phonebook
 
 SRC_DIR = src
-SRC = $(SRC_DIR)/Phonebook.cpp
+SRC = $(SRC_DIR)/main.cpp
 
 CC = @c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
