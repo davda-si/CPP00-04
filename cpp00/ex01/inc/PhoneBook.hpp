@@ -1,11 +1,14 @@
-#include <iostream>
-#include <stdlib.h>
-#include "Contacts.hpp"
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+# include <iomanip>
+# include <iostream>
+# include <locale>
+# include <stdlib.h>
+# include "Contacts.hpp"
 
 class PhoneBook
 {
 	private:
-		int			_index;
 		Contacts	_Contacts[8];
 	public:
 		PhoneBook();
@@ -13,3 +16,5 @@ class PhoneBook
 		void Add_Contact();
 		void Search();
 };
+
+#endif
