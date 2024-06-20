@@ -12,6 +12,7 @@ class ClapTrap
 	unsigned int	_ad;
 
 	public:
+	ClapTrap();
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap& ref);
 	ClapTrap& operator=(const ClapTrap& ref);
@@ -20,6 +21,9 @@ class ClapTrap
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
+
+	std::string getName() const;
+	unsigned int getDmg() const;
 };
 
 #endif

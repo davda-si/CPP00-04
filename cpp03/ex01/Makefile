@@ -1,7 +1,7 @@
 NAME = ClapTrap
 
 SRC_DIR = src
-SRC = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp
+SRC = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp $(SRC_DIR)/ScavTrap.cpp
 
 CC = @c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror

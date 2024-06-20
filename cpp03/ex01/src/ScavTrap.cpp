@@ -50,7 +50,7 @@ void	ScavTrap::attack(const std::string& target)
 	else
 	{
 		_ep--;
-		std::cout << getName() << " attacks " << target << ", causing " << _ad << " of damage! What a hit!" << std::endl;
+		std::cout << getName() << " attacks " << target << ", causing " << getDmg() << " of damage! What a hit!" << std::endl;
 	}
 }
 
