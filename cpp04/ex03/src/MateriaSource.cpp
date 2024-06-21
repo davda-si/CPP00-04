@@ -24,6 +24,13 @@ MateriaSource &MateriaSource::operator=(const MateriaSource& ref)
 	return *this;
 }
 
+MateriaSource::~MateriaSource()
+{
+	for (int i = 0; i < 4; i++)
+		delete this->_book[i];
+	std::cout << "Destructor called for MateriaSource" << std::endl;
+}
+
 void	MateriaSource::learnMateria(AMateria *mat)
 {
 	for (int i = 0; i < 4; i++)

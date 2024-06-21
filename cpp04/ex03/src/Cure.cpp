@@ -2,14 +2,14 @@
 
 Cure::Cure()
 {
-	_type = "ice";
-	std::cout << "Materia Ice was created, you can learn it now" << std::endl;
+	_type = "cure";
+	std::cout << "Materia Cure was created, you can learn it now" << std::endl;
 }
 
 Cure::Cure(const Cure& ref)
 {
 	*this = ref;
-	std::cout << "Ice copy constructor called" << std::endl;
+	std::cout << "Cure copy constructor called" << std::endl;
 }
 
 Cure&	Cure::operator=(const Cure& ref)
@@ -17,14 +17,14 @@ Cure&	Cure::operator=(const Cure& ref)
 	if (this != &ref)
 	{
 		this->_type = ref._type;
-		std::cout << "Ice assigned to new copy" << std::endl;
+		std::cout << "Cure assigned to new copy" << std::endl;
 	}
 	return (*this);
 }
 
 Cure::~Cure()
 {
-	std::cout << "Ice destroyed!" << std::endl;
+	std::cout << "Cure destroyed!" << std::endl;
 }
 
 Cure	*Cure::clone() const

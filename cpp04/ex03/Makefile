@@ -1,7 +1,8 @@
-NAME = AnimalKingdom
+NAME = RPG
 
 SRC_DIR = src
-SRC = $(SRC_DIR)/main.cpp
+SRC = $(SRC_DIR)/main.cpp $(SRC_DIR)/AMateria.cpp $(SRC_DIR)/Character.cpp $(SRC_DIR)/Cure.cpp \
+	$(SRC_DIR)/Ice.cpp $(SRC_DIR)/MateriaSource.cpp
 
 CC = @c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
