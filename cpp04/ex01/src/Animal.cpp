@@ -9,7 +9,7 @@ Animal::Animal()
 Animal::Animal(const Animal& ref)
 {
 	*this = ref;
-	std::cout << "A wild Animal appeared!"  << std::endl;
+	std::cout << "A wild Animal appeared!" << std::endl;
 }
 
 Animal	&Animal::operator=(const Animal &ref)
@@ -17,7 +17,8 @@ Animal	&Animal::operator=(const Animal &ref)
 	if (this != &ref)
 	{
 		*this = ref;
-		std::cout << "A wild Animal appeared!"  << std::endl;
+		this->_type = ref.getType();
+		std::cout << "A wild Animal appeared!" << std::endl;
 	}
 	return *this;
 }

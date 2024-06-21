@@ -14,6 +14,8 @@ class Dog: public Animal
 	~Dog();
 
 	void	makeSound() const;
+	void	setDogIdea(int const id, std::string const idea);
+	std::string const	getDogIdea(int const id);
 };
 
 #endif

@@ -7,29 +7,11 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	std::cout << std::endl;
-	const Animal* j = new Dog();
-	std::cout << std::endl;
-	const Animal* i = new Cat();
-	std::cout << std::endl;
-	const WrongAnimal* k = new WrongCat();
-	std::cout << std::endl;
-	const WrongAnimal* l = new WrongAnimal();
-	std::cout << std::endl;
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	std::cout << k->getType() << " " << std::endl;
-	std::cout << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
-	k->makeSound();
-	l->makeSound();
-	delete i;
-	delete j;
-	delete meta;
-	delete k;
-	delete l;
+	const Animal* Zoo[20];
+
+	for (int i = 0; i < 10; i++)
+		Zoo[i] = new Cat();
+	for (int i = 10; i < 20; i++)
+		Zoo[i] = new Dog();
 	return 0;
 }

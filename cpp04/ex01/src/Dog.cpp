@@ -10,7 +10,7 @@ Dog::Dog()
 Dog::Dog(const Dog& ref)
 {
 	*this = ref;
-	this->_brain = new Brain();
+	this->_brain = new Brain(*ref._brain);
 	std::cout << "A wild Dog appeared!"  << std::endl;
 }
 
@@ -19,6 +19,7 @@ Dog	&Dog::operator=(const Dog &ref)
 	if (this != &ref)
 	{
 		*this = ref;
+		this->_brain = new Brain(*ref._brain);
 		std::cout << "A wild Dog appeared!"  << std::endl;
 	}
 	return *this;
@@ -32,4 +33,14 @@ Dog::~Dog()
 void	Dog::makeSound() const
 {
 	std::cout << "BARK BARK WOOF" << std::endl;
+}
+
+void	Dog::setDogIdea(int const id, std::string const idea)
+{
+	_brain->setIdea(id, idea);
+}
+
+std::string const	Dog::getDogIdea(int const id)
+{
+	_brain->getIdea(id);
 }

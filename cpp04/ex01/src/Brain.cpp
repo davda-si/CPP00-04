@@ -5,7 +5,7 @@ Brain::Brain()
 	std::cout << "Brain developed" << std::endl;
 }
 
-Brain::Brain(const Brain& ref)
+Brain::Brain(const Brain& ref):
 {
 	*this = ref;
 	std::cout << "Brain developed" << std::endl;
@@ -16,6 +16,8 @@ Brain	&Brain::operator=(const Brain &ref)
 	if (this != &ref)
 	{
 		*this = ref;
+		for (int i = 0; i < 100; i++)
+			this->_ideas[i] = ref._ideas[i];
 		std::cout << "Brain developed" << std::endl;
 	}
 	return *this;
@@ -24,4 +26,15 @@ Brain	&Brain::operator=(const Brain &ref)
 Brain::~Brain()
 {
 	std::cout << "Brain withered" << std::endl;
+}
+
+void	Brain::setIdea(int const id, std::string const idea)
+{
+	if (id >= 0 && id < 100)
+		_ideas[id] = idea;
+}
+
+std::string const	Brain::getIdea(int const id)
+{
+	return _ideas[id];
 }
