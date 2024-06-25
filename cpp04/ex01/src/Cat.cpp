@@ -10,17 +10,15 @@ Cat::Cat()
 Cat::Cat(const Cat& ref)
 {
 	*this = ref;
-	this->_brain = new Brain(*ref._brain);
-	std::cout << "A wild Cat appeared!"  << std::endl;
+	std::cout << "A wild Cat appeared! (copy constructor)" << std::endl;
 }
 
 Cat	&Cat::operator=(const Cat &ref)
 {
 	if (this != &ref)
 	{
-		*this = ref;
 		this->_brain = new Brain(*ref._brain);
-		std::cout << "A wild Cat appeared!"  << std::endl;
+		std::cout << "A wild Cat appeared! (operator overload=)" << std::endl;
 	}
 	return *this;
 }
@@ -41,7 +39,7 @@ void	Cat::setCatIdea(int const id, std::string const idea)
 	_brain->setIdea(id, idea);
 }
 
-std::string const	Cat::getCatIdea(int const id)
+std::string const	Cat::getCatIdea(int const id) const
 {
-	_brain->getIdea(id);
+	return (_brain->getIdea(id));
 }

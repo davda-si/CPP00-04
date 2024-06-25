@@ -9,16 +9,15 @@ Animal::Animal()
 Animal::Animal(const Animal& ref)
 {
 	*this = ref;
-	std::cout << "A wild Animal appeared!" << std::endl;
+	std::cout << "A wild Animal appeared! (copy constructor)" << std::endl;
 }
 
 Animal	&Animal::operator=(const Animal &ref)
 {
 	if (this != &ref)
 	{
-		*this = ref;
 		this->_type = ref.getType();
-		std::cout << "A wild Animal appeared!" << std::endl;
+		std::cout << "A wild Animal appeared! (operator overload=)" << std::endl;
 	}
 	return *this;
 }

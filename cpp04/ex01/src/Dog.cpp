@@ -10,23 +10,22 @@ Dog::Dog()
 Dog::Dog(const Dog& ref)
 {
 	*this = ref;
-	this->_brain = new Brain(*ref._brain);
-	std::cout << "A wild Dog appeared!"  << std::endl;
+	std::cout << "A wild Dog appeared! (copy constructor)" << std::endl;
 }
 
 Dog	&Dog::operator=(const Dog &ref)
 {
 	if (this != &ref)
 	{
-		*this = ref;
 		this->_brain = new Brain(*ref._brain);
-		std::cout << "A wild Dog appeared!"  << std::endl;
+		std::cout << "A wild Dog appeared!(operator overload=)" << std::endl;
 	}
 	return *this;
 }
 
 Dog::~Dog()
 {
+	delete _brain;
 	std::cout << "Dog ran away!" << std::endl;
 }
 
@@ -40,7 +39,7 @@ void	Dog::setDogIdea(int const id, std::string const idea)
 	_brain->setIdea(id, idea);
 }
 
-std::string const	Dog::getDogIdea(int const id)
+std::string const	Dog::getDogIdea(int const id) const
 {
-	_brain->getIdea(id);
+	return (_brain->getIdea(id));
 }

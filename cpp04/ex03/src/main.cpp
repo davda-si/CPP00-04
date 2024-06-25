@@ -22,7 +22,6 @@ int main()
 	std::cout << std::endl;
 	me->equip(tmp);
 	std::cout << std::endl;
-
 	ICharacter* bob = new Character("bob");
 	std::cout << std::endl;
 	me->use(0, *bob);

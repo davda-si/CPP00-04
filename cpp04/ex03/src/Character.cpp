@@ -23,8 +23,10 @@ Character& Character::operator=(const Character& ref)
 		this->_name = ref._name;
 		for (int i = 0; i < 4; i++)
 		{
-			delete this->_slots[i];
-			this->_slots[i] = ref._slots[i]->clone();
+			if (ref._slots[i])
+				this->_slots[i] = ref._slots[i]->clone();
+			else
+				this->_slots[i] = NULL;
 		}
 		std::cout << "assign. operator for character called" << std::endl;
 	}
@@ -74,10 +76,7 @@ std::string const&	Character::getName() const
  void	Character::use(int idx, ICharacter& target)
  {
 	if ((idx >= 0 && idx < 4) && _slots[idx])
-	{
-		_slots[idx]->AMateria::use(target);
-		std::cout << _name << " unequiped " << _slots[idx]->getType() << " for now" << std::endl;
-	}
+		_slots[idx]->use(target);
 	else
 		std::cout << "Invalid index on Inventory slots!" << std::endl;
  }
