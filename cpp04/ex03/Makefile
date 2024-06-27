@@ -5,7 +5,7 @@ SRC = $(SRC_DIR)/main.cpp $(SRC_DIR)/AMateria.cpp $(SRC_DIR)/Character.cpp $(SRC
 	$(SRC_DIR)/Ice.cpp $(SRC_DIR)/MateriaSource.cpp
 
 CC = @c++
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
+CFLAGS = -std=c++98 -Wall -Wextra -Werror -g
 
 OBJ_DIR = obj
 OBJS = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)

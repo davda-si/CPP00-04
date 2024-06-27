@@ -1,4 +1,4 @@
-#include "../inc/Animal.hpp"
+#include "../inc/AAnimal.hpp"
 #include "../inc/WrongAnimal.hpp"
 #include "../inc/Dog.hpp"
 #include "../inc/Cat.hpp"
@@ -9,7 +9,7 @@ int main()
 {
 	std::cout << "Animal array test" << std::endl;
 	std::cout << "----------------------------------------------------" << std::endl;
-	const Animal* Zoo[20];
+	const AAnimal* Zoo[20];
 	for (int i = 0; i < 10; i++)
 	{
 		Zoo[i] = new Cat();
@@ -47,6 +47,12 @@ int main()
 	Dog	b;
 	a.setCatIdea(0, "fish");
 	b.setDogIdea(0, "ball");
+	{
+		Cat c = a;
+		std::cout << std::endl;
+		std::cout << "The Cat's thinking about: " << c.getCatIdea(0) << std::endl;
+		std::cout << std::endl;
+	}
 	std::cout << std::endl;
 	std::cout << "The Cat's thinking about: " << a.getCatIdea(0) << std::endl;
 	std::cout << std::endl;

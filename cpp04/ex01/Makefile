@@ -5,7 +5,7 @@ SRC = $(SRC_DIR)/main.cpp $(SRC_DIR)/Animal.cpp $(SRC_DIR)/Cat.cpp $(SRC_DIR)/Do
 		$(SRC_DIR)/Brain.cpp
 
 CC = @c++
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
+CFLAGS = -std=c++98 -Wall -Wextra -Werror -g
 
 OBJ_DIR = obj
 OBJS = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)

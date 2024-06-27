@@ -36,7 +36,8 @@ int main()
 	Dog basic;
 	{
 		std::cout << std::endl;
-		Dog tmp = basic;
+		Dog tmp;
+		tmp = basic;
 		std::cout << std::endl;
 	}
 	std::cout << std::endl;
@@ -47,6 +48,13 @@ int main()
 	Dog	b;
 	a.setCatIdea(0, "fish");
 	b.setDogIdea(0, "ball");
+	{
+		Cat c;
+		c = a;
+		std::cout << std::endl;
+		std::cout << "The Cat's thinking about: " << c.getCatIdea(0) << std::endl;
+		std::cout << std::endl;
+	}
 	std::cout << std::endl;
 	std::cout << "The Cat's thinking about: " << a.getCatIdea(0) << std::endl;
 	std::cout << std::endl;

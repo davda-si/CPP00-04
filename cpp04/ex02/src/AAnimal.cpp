@@ -1,18 +1,18 @@
-#include "../inc/Animal.hpp"
+#include "../inc/AAnimal.hpp"
 
-Animal::Animal()
+AAnimal::AAnimal()
 {
 	_type = "Animal";
 	std::cout << "A wild Animal appeared!" << std::endl;
 }
 
-Animal::Animal(const Animal& ref)
+AAnimal::AAnimal(const AAnimal& ref)
 {
 	*this = ref;
 	std::cout << "A wild Animal appeared! (copy constructor)" << std::endl;
 }
 
-Animal	&Animal::operator=(const Animal &ref)
+AAnimal	&AAnimal::operator=(const AAnimal &ref)
 {
 	if (this != &ref)
 	{
@@ -22,17 +22,17 @@ Animal	&Animal::operator=(const Animal &ref)
 	return *this;
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
 	std::cout << "Animal ran away!" << std::endl;
 }
 
-std::string	Animal::getType() const
+std::string	AAnimal::getType() const
 {
 	return _type;
 }
 
-void	Animal::makeSound() const
+void	AAnimal::makeSound() const
 {
 	std::cout << " * Random animal sound * " << std::endl;
 }

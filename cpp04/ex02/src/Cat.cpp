@@ -9,7 +9,8 @@ Cat::Cat()
 
 Cat::Cat(const Cat& ref)
 {
-	*this = ref;
+	_brain = new Brain(*ref._brain);
+	this->_type = ref._type;
 	std::cout << "A wild Cat appeared! (copy constructor)" << std::endl;
 }
 
@@ -17,7 +18,9 @@ Cat	&Cat::operator=(const Cat &ref)
 {
 	if (this != &ref)
 	{
+		delete this->_brain;
 		this->_brain = new Brain(*ref._brain);
+		this->_type = ref._type;
 		std::cout << "A wild Cat appeared! (operator overload=)" << std::endl;
 	}
 	return *this;

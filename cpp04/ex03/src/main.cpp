@@ -26,9 +26,11 @@ int main()
 	std::cout << std::endl;
 	me->use(0, *bob);
 	me->use(1, *bob);
+	me->unequip(0);
+	me->unequip(1);
 	std::cout << std::endl;
-	delete bob;
 	delete me;
+	delete bob;
 	delete src;
 	return 0;
 }

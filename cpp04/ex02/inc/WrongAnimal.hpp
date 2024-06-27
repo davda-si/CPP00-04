@@ -12,10 +12,10 @@ class WrongAnimal
 	WrongAnimal();
 	WrongAnimal(const WrongAnimal& ref);
 	WrongAnimal& operator=(const WrongAnimal& ref);
-	virtual ~WrongAnimal();
+	~WrongAnimal();
 
-	virtual std::string	getType() const;
-	virtual void	makeSound() const;
+	std::string	getType() const;
+	void	makeSound() const;
 };
 
 #endif

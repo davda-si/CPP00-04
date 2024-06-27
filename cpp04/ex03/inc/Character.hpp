@@ -7,13 +7,14 @@ class Character: public ICharacter
 	private:
 	std::string _name;
 	AMateria *_slots[4];
+	AMateria *_ref[100];
 	Character();
 
 	public:
 	Character(std::string name);
 	Character(const Character& ref);
 	Character& operator=(const Character& ref);
-	~Character();
+	virtual ~Character();
 
 	std::string const & getName() const;
 	void equip(AMateria* m);

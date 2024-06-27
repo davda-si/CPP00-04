@@ -1,7 +1,7 @@
 NAME = AnimalKingdom
 
 SRC_DIR = src
-SRC = $(SRC_DIR)/main.cpp $(SRC_DIR)/Animal.cpp $(SRC_DIR)/Cat.cpp $(SRC_DIR)/Dog.cpp $(SRC_DIR)/WrongAnimal.cpp $(SRC_DIR)/WrongCat.cpp \
+SRC = $(SRC_DIR)/main.cpp $(SRC_DIR)/AAnimal.cpp $(SRC_DIR)/Cat.cpp $(SRC_DIR)/Dog.cpp $(SRC_DIR)/WrongAnimal.cpp $(SRC_DIR)/WrongCat.cpp \
 		$(SRC_DIR)/Brain.cpp
 
 CC = @c++

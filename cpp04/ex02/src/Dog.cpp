@@ -9,7 +9,8 @@ Dog::Dog()
 
 Dog::Dog(const Dog& ref)
 {
-	*this = ref;
+	_brain = new Brain(*ref._brain);
+	this->_type = ref._type;
 	std::cout << "A wild Dog appeared! (copy constructor)" << std::endl;
 }
 
@@ -17,7 +18,9 @@ Dog	&Dog::operator=(const Dog &ref)
 {
 	if (this != &ref)
 	{
+		delete this->_brain;
 		this->_brain = new Brain(*ref._brain);
+		this->_type = ref._type;
 		std::cout << "A wild Dog appeared!(operator overload=)" << std::endl;
 	}
 	return *this;
